@@ -1,0 +1,19 @@
+{
+  "name": "hospital-back",
+  "version": "1.0.0",
+  "description": "Servidor backend de la aplicación de Hospital-Front, con todos sus servicios",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Engelber Amaya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.28"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
