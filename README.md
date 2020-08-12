@@ -12,4 +12,10 @@ Para correr la aplicación, es necesario usar el comando
 
 ```
 npm start
+
 ```
+
+## Lista de Peticiones
+
+A través del siguiente link: (https://documenter.getpostman.com/view/1786073/T1LMiSmt)
+
