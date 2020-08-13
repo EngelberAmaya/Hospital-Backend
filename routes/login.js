@@ -46,8 +46,7 @@ app.post('', (req, res) =>{
 
 		res.status(200).json({
 			ok:true,
-			usuario: usuarioDB,
-			body: body,
+			usuario: usuarioDB,			
 			token: token,
 			id: usuarioDB._id
 		});

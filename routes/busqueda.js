@@ -7,7 +7,6 @@ var Hospital = require('../models/hospital');
 var Medico = require('../models/medico');
 var Usuario = require('../models/usuario');
 
-
 //Busqueda por coleccion
 
 app.get('/coleccion/:tabla/:busqueda', (req, res) => {
@@ -117,8 +116,7 @@ function buscarUsuarios(busqueda, regex){
 			   		} else {
 			   			resolve(usuarios);
 			   		}
-			   })
-			  
+			   })  
 	});
 }
 

@@ -20,6 +20,7 @@ app.put('/:tipo/:id', (req, res, next) => {
 
 	//tipos de colección
 	var tiposValidos = ['hospitales','medicos','usuarios'];
+	
 	if (tiposValidos.indexOf(tipo) < 0) {
 		 return res.status(400).json({
             ok: false,

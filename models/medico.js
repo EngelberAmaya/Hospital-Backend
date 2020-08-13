@@ -11,5 +11,4 @@ var medicoSchema = new Schema({
 			  }
 });
 
-
 module.exports = mongoose.model('Medico', medicoSchema);

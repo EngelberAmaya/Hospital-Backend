@@ -1,7 +1,6 @@
 //Requires
 var express = require('express');
 
-
 var mdMiddlewares = require('../middlewares/autenticacion');
 
 //var SEED = require('../config/config').SEED;
@@ -42,9 +41,7 @@ app.get('/', (req, res, next) => {
 						});
 					});
 
-					
 				});
-
 });
 
 
@@ -89,8 +86,6 @@ app.put('/:id', mdMiddlewares.verificaToken, (req, res) => {
 					errors: err
 				});
 			}
-
-			
 
 			res.status(200).json({
 				ok:true,

@@ -8,5 +8,4 @@ var hospitalSchema = new Schema({
 	usuario: { type:Schema.Types.ObjectId, ref:'Usuario' }
 }, {collection: 'hospitales'});
 
-
 module.exports = mongoose.model('Hospital', hospitalSchema);

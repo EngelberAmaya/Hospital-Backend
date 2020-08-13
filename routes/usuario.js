@@ -41,14 +41,8 @@ app.get('/', (req, res, next) => {
 						});
 					});
 
-
-					
 				});
-
 });
-
-
-
 
 
 // ============================================
@@ -106,12 +100,11 @@ app.put('/:id', mdMiddlewares.verificaToken, (req, res) => {
 });
 
 
-
 // ============================================
 // Crear un nuevo usuario
 // ============================================
 
-app.post('/', mdMiddlewares.verificaToken, (req, res) => {
+app.post('/', (req, res) => {
 
 	var body = req.body;
 

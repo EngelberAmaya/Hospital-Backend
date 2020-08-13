@@ -1,7 +1,6 @@
 //Requires
 var express = require('express');
 
-
 var mdMiddlewares = require('../middlewares/autenticacion');
 
 //var SEED = require('../config/config').SEED;
