@@ -88,7 +88,7 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
                 });
             }
 
-			var pathViejo = './uploads/usuarios/' + usuario.img;
+			var pathViejo = '../uploads/usuarios/' + usuario.img;
 
 			// si existe, elimina la imagen anterior
 			if (fs.existsSync(pathViejo)) {
@@ -106,8 +106,8 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
 					ok:true,
 					mensaje: 'Imagen del Usuario actualizada',
 					usuario: usuarioActualizado
-				})
-			});
+				});
+			})
 
 		});
 	}
@@ -124,7 +124,7 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
                 });
             }
 
-			var pathViejo = './uploads/medicos/' + medico.img;
+			var pathViejo = '../uploads/medicos/' + medico.img;
 
 			// si existe, elimina la imagen anterior
 			if (fs.existsSync(pathViejo)) {
@@ -142,8 +142,8 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
 					ok:true,
 					mensaje: 'Imagen del Médico actualizada',
 					medico: medicoActualizado
-				})
-			});
+				});
+			})
 
 		});
 	}
@@ -159,7 +159,7 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
                 });
             }
 
-			var pathViejo = './uploads/hospitales/' + hospital.img;
+			var pathViejo = '../uploads/hospitales/' + hospital.img;
 
 			// si existe, elimina la imagen anterior
 			if (fs.existsSync(pathViejo)) {
@@ -177,8 +177,8 @@ function subirPorTipo(tipo, id, nombreArchivo, res){
 					ok:true,
 					mensaje: 'Imagen del Hospital actualizada',
 					hospital: hospitalActualizado
-				})
-			});
+				});
+			})
 
 		});
 	}
