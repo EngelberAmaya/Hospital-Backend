@@ -48,11 +48,51 @@ app.post('/', (req, res) =>{
 			ok:true,
 			usuario: usuarioDB,			
 			token: token,
-			id: usuarioDB._id
+			id: usuarioDB._id,
+			menu: obtenerMenu(usuarioDB.role)
 		});
 
 	});
 
 });
+
+
+function obtenerMenu(ROLE) {
+
+     var menu = [
+     {
+       titulo: 'Principal',
+       icono: 'mdi mdi-gauge',
+       submenu: [
+         //{ titulo: 'Main', url: '/' },
+         { titulo: 'Dashboard', url: '/dashboard' },
+         { titulo: 'Gráficas', url: '/grafica1' },
+         { titulo: 'RxJs', url: '/rxjs' },
+         { titulo: 'Promesas', url: 'promesas' },
+         { titulo: 'ProgressBar', url: '/progress' },
+       ]
+     },
+
+     {
+       titulo: 'Mantenimientos',
+       icono: 'mdi mdi-folder-lock-open',
+       submenu: [
+         //{ titulo: 'Usuarios', url: '/usuarios' },
+         { titulo: 'Hospitales', url: '/hospitales' },
+         { titulo: 'Médicos', url: '/medicos' },
+       ]
+     },
+   ];
+
+    console.log('ROLE', ROLE);
+
+    if (ROLE === 'ADMIN_ROLE') {
+        menu[1].submenu.unshift({ titulo: 'Usuarios', url: '/usuarios' });
+    }
+
+
+    return menu;
+
+}
 
 module.exports = app;

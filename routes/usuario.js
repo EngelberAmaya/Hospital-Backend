@@ -49,7 +49,7 @@ app.get('/', (req, res, next) => {
 // Actualizar usuario
 // ============================================
 
-app.put('/:id', mdMiddlewares.verificaToken, (req, res) => {
+app.put('/:id', [mdMiddlewares.verificaToken, mdMiddlewares.verificaAdmin_o_Usuario], (req, res) => {
 
 	var id = req.params.id;
 	var body = req.body;
@@ -139,7 +139,7 @@ app.post('/', (req, res) => {
 // Borrar un usuario por id
 // ============================================
 
-app.delete('/:id', mdMiddlewares.verificaToken, (req, res) => {
+app.delete('/:id', [mdMiddlewares.verificaToken, mdMiddlewares.verificaAdminRole], (req, res) => {
 
 	var id = req.params.id;
 
