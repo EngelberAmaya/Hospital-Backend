@@ -8,6 +8,22 @@ var SEED = require('../config/config').SEED;
 var app = express();
 
 var Usuario = require('../models/usuario');
+var mdAutenticacion = require('../middlewares/autenticacion');
+
+// ==========================================
+//  Renovar Token
+// ==========================================
+app.get('/renuevatoken', mdAutenticacion.verificaToken, (req, res) => {
+
+    var token = jwt.sign({ usuario: req.usuario }, SEED, { expiresIn: 14400 }); // 4 horas
+
+    res.status(200).json({
+        ok: true,
+        //usuario: req.usuario,
+        token: token
+    });
+
+});
 
 app.post('/', (req, res) =>{
 
@@ -41,7 +57,7 @@ app.post('/', (req, res) =>{
 
 		// Crear un token
 		usuarioDB.password = ':)';
-		var token = jwt.sign({ usuario: usuarioDB }, SEED, { expiresIn: 43200}); // 4 horas
+		var token = jwt.sign({ usuario: usuarioDB }, SEED, { expiresIn: 14400}); // 4 horas
 
 
 		res.status(200).json({
